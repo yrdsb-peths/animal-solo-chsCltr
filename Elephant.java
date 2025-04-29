@@ -8,16 +8,26 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Elephant extends Actor
 {
-    static int speed = 2;
+    static int speed = 0;
+    
     public void act()
     {
         if(Greenfoot.isKeyDown("right")){
-            move(speed);
+            speed+=2;
         }
         if(Greenfoot.isKeyDown("left")){
-            move(-speed);
+            speed-=2;
         }
         eat();
+        move(speed/2);
+        if(speed<0)
+        {
+            speed++;
+        }
+        else if(speed>0)
+        {
+            speed--;
+        }
     }
     public void eat()
     {
