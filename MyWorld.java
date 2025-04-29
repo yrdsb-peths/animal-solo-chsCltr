@@ -20,8 +20,8 @@ public class MyWorld extends World {
     public void createApple()
     {
         Apple apple = new Apple();
-        int x = Greenfoot.getRandomNumber(600);
-        addObject(apple, x, 0);
+        int x = Greenfoot.getRandomNumber(580);
+        addObject(apple, x+10, 0);
     }
     public void increaseScore()
     {
